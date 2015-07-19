@@ -26,26 +26,6 @@ public class MainActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_main);
 	}
 
-	private void tests() {
-		Uri u = Uri.fromFile(new File("/sdcard/DCIM/Camera/Test.mp4"));
-		u = Uri.parse(
-				new File(Environment.getExternalStorageDirectory().getPath() + "/DCIM/Camera/Test.mp4").toString());
-		VideoView v = (VideoView) findViewById(R.id.teacherVideoView);
-		// v.setVideoURI(u);
-
-//		Uri uri = Uri.parse(Environment.getExternalStorageDirectory() + "/DCIM/Camera/Test.mp4");
-		Uri uri = Uri.parse(Environment.getExternalStorageDirectory() + "/Download/Scotts.wav");
-//		File file = new File(Environment.getExternalStorageDirectory() + "/DCIM/Camera/Tes1t.mp4");
-//		Log.d("Nitin", file.exists() + "");
-		v.setVideoURI(uri);
-		v.start();
-
-		u = Uri.parse(new File("/sdcard/DCIM/Camera/nitin.jpg").toString());
-		u = Uri.fromFile(new File("/sdcard/DCIM/Camera/nitin.jpg"));
-		ImageView i = (ImageView) findViewById(R.id.imageView1);
-		i.setImageURI(u);
-	}
-
 	public void dispatchTakeVideoIntent(View view) {
 		Intent takeVideoIntent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
 		if (takeVideoIntent.resolveActivity(getPackageManager()) != null) {
@@ -62,6 +42,11 @@ public class MainActivity extends ActionBarActivity {
 			// v.setVideoURI(videoUri);
 			// v.start();
 		}
+	}
+
+	public void navigateToHistoryIntent(View view) {
+		Intent intent = new Intent(this, History.class);
+		startActivity(intent);
 	}
 
 	@Override

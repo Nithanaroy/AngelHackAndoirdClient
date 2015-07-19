@@ -1,42 +1,30 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.angelhack.visionangelhack.MainActivity" >
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
+    <Button
+        android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:orientation="vertical" >
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:onClick="dispatchTakeVideoIntent"
+        android:text="Capture" />
 
-        <Button
-            android:id="@+id/playButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="dispatchTakeVideoIntent"
-            android:text="Capture" />
+    <Button
+        android:id="@+id/navigateToHistoryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:onClick="navigateToHistoryIntent"
+        android:text="Go to History" />
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minHeight="50pt"
-            android:minWidth="50pt"
-            android:src="@drawable/abc_ab_share_pack_mtrl_alpha" />
-
-        <VideoView
-            android:id="@+id/teacherVideoView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/linearLayout1"
-            android:layout_alignParentBottom="true" />
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>
