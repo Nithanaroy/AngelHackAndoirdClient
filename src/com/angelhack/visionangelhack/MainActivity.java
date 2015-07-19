@@ -30,7 +30,7 @@ public class MainActivity extends ActionBarActivity {
 		Uri u = Uri.fromFile(new File("/sdcard/DCIM/Camera/Test.mp4"));
 		u = Uri.parse(
 				new File(Environment.getExternalStorageDirectory().getPath() + "/DCIM/Camera/Test.mp4").toString());
-		VideoView v = (VideoView) findViewById(R.id.videoView1);
+		VideoView v = (VideoView) findViewById(R.id.teacherVideoView);
 		// v.setVideoURI(u);
 
 //		Uri uri = Uri.parse(Environment.getExternalStorageDirectory() + "/DCIM/Camera/Test.mp4");
@@ -57,9 +57,10 @@ public class MainActivity extends ActionBarActivity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (requestCode == REQUEST_VIDEO_CAPTURE && resultCode == RESULT_OK) {
 			Uri videoUri = data.getData();
-			VideoView v = (VideoView) findViewById(R.id.videoView1);
-			v.setVideoURI(videoUri);
-			v.start();
+			// TODO: Send this video to the service
+			// VideoView v = (VideoView) findViewById(R.id.videoView1);
+			// v.setVideoURI(videoUri);
+			// v.start();
 		}
 	}
 

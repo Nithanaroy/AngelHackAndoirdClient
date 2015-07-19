@@ -17,7 +17,7 @@
         android:orientation="vertical" >
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/playButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="dispatchTakeVideoIntent"
@@ -32,7 +32,7 @@
             android:src="@drawable/abc_ab_share_pack_mtrl_alpha" />
 
         <VideoView
-            android:id="@+id/videoView1"
+            android:id="@+id/teacherVideoView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/linearLayout1"
